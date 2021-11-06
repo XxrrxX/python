@@ -1,6 +1,10 @@
 import socket
 host = ''
-port = 9999
+port = int(input("Puerto: "))
+puerto = open('/var/www/html/javascript/inyectar/inyectado/flask/p/puerto.txt','w')
+p = puerto.write(str(port))
+puerto.close()
+
 #Crear socket
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 #Enlazar
